@@ -51,7 +51,7 @@ def api_dl(video_id: str) -> str | None:
         return file_path
 
     try:
-        response = requests.get(api_url, stream=True, timeout=15)
+        response = requests.get(api_url, stream=True, timeout=10)
 
         if response.status_code == 200:
             os.makedirs("downloads", exist_ok=True)
